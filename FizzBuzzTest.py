@@ -21,5 +21,10 @@ class FizzBuzzTest(unittest.TestCase):
         fizz = FizzBuzz(25)
         self.assertEqual("Buzz",fizz.play())
 
+    def test_if_number_is_multiple_of_three_and_five(self):
+        fizz = FizzBuzz(15)
+        self.assertEqual("FizzBuzz",fizz.play())
+
+
 
 
