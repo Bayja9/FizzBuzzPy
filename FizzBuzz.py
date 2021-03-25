@@ -6,19 +6,29 @@ class FizzBuzz:
         self.number = number
 
     def play(self):
-        multiple_of_three = self.number % 3 == 0
-        multiple_of_five = self.number % 5 == 0
-
-        if self.number <= 0:
+        if self.is_invalid():
             raise InvalidNumberException('Number is invalid.')
-        if multiple_of_three and multiple_of_five:
+        if self.is_multiple_of_three_and_five():
             return "FizzBuzz"
-        if multiple_of_three:
+        if self.is_multiple_of_three():
             return "Fizz"
-        if multiple_of_five:
+        if self.is_multiple_of_five():
             return 'Buzz'
         else:
             return self.number
+
+    def is_invalid(self):
+        return self.number <= 0
+
+    def is_multiple_of_three(self):
+        return self.number % 3 == 0
+
+    def is_multiple_of_five(self):
+        return self.number % 5 == 0
+
+    def is_multiple_of_three_and_five(self):
+        return self.is_multiple_of_three() & self.is_multiple_of_five()
+
 
 
 
