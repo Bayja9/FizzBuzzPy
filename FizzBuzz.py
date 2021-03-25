@@ -10,4 +10,7 @@ class FizzBuzz:
             raise InvalidNumberException('Number is invalid.')
         if self.number == 0:
             raise InvalidNumberException("Number is invalid")
+        if self.number % 3 == 0:
+            return "Fizz"
+
 
