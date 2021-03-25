@@ -25,6 +25,10 @@ class FizzBuzzTest(unittest.TestCase):
         fizz = FizzBuzz(15)
         self.assertEqual("FizzBuzz",fizz.play())
 
+    def test_if_return_number(self):
+        fizz = FizzBuzz(1)
+        self.assertEqual(fizz.number,fizz.play())
+
 
 
 
