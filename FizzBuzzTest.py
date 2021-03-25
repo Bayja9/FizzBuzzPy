@@ -13,5 +13,9 @@ class FizzBuzzTest(unittest.TestCase):
         with self.assertRaises(InvalidNumberException):
             FizzBuzz(0).play()
 
+    def test_if_number_is_multiple_of_three(self):
+        fizz = FizzBuzz(6)
+        self.assertEqual("Fizz",fizz.play())
+
 
 
