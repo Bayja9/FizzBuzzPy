@@ -17,5 +17,9 @@ class FizzBuzzTest(unittest.TestCase):
         fizz = FizzBuzz(6)
         self.assertEqual("Fizz",fizz.play())
 
+    def test_if_number_is_multiple_of_five(self):
+        fizz = FizzBuzz(25)
+        self.assertEqual("Buzz",fizz.play())
+
 
 
