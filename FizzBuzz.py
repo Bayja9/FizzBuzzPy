@@ -8,3 +8,6 @@ class FizzBuzz:
     def play(self):
         if self.number < 0:
             raise InvalidNumberException('Number is invalid.')
+        if self.number == 0:
+            raise InvalidNumberException("Number is invalid")
+
