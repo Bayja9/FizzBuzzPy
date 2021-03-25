@@ -9,5 +9,9 @@ class FizzBuzzTest(unittest.TestCase):
         with self.assertRaises(InvalidNumberException):
             FizzBuzz(-2).play()
 
+    def test_if_number_is_equal_to_zero(self):
+        with self.assertRaises(InvalidNumberException):
+            FizzBuzz(0).play()
+
 
 
